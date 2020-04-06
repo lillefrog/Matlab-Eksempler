@@ -1,14 +1,14 @@
 % Demonstration af matlabs plot funktion
-% Denne fil indeholder flere forskellige eksempler på hvordan matlabs plot
-% funktion kan bruges. Den bliver gennemgået i min youtube video:
-% 
+% Denne fil indeholder flere forskellige eksempler pÃ¥ hvordan matlabs plot
+% funktion kan bruges. Den bliver gennemgÃ¥et i min youtube video:
+% https://youtu.be/Byj-STxbKnA 
 %
 % For mere information om matlabs plot funktions se matlabs reference side
 % https://se.mathworks.com/help/matlab/ref/plot.html
 
 %% Simple plot
 
-% først skal vi bruge noget data, dette bliver bruget i alle følgende
+% fÃ¸rst skal vi bruge noget data, dette bliver bruget i alle fÃ¸lgende
 % eksempler
 x = [1 2 3 4 5 6 7 8 9 10 11 14 16];
 data1 = [2 4 5 4 3 2 3 5 4 7 7 2 3];
@@ -43,7 +43,7 @@ plot(x,data2, 'y', 'LineWidth', 10);
 % mulige farver
 % 'y' 'm' 'c' 'r' 'g' 'b' 'w' 'k'
 % eller
-% [rød grøn blå] % hver farve er et tal mellem 0 og 1
+% [rÃ¸d grÃ¸n blÃ¥] % hver farve er et tal mellem 0 og 1
 
 
 
@@ -85,9 +85,9 @@ ylabel('Noget andet', 'fontsize', 20)
 
 
 
-%% axerne (ændre altid den aktive figur)
+%% axerne (Ã¦ndre altid den aktive figur)
 
-xlim([0 20]) % ændre grænserne for x aksen
+xlim([0 20]) % Ã¦ndre grÃ¦nserne for x aksen
 ylim([0 10])
 
 yticks([0 5 10])
@@ -107,7 +107,7 @@ plot(x, data2);
 set(gca, 'xScale', 'log') 
 set(gca, 'yScale', 'log')
 
-% dette kan også gøres med funktionerne semilogx og semilogy der virker
+% dette kan ogsÃ¥ gÃ¸res med funktionerne semilogx og semilogy der virker
 % lige som plot bortset fra at en af akserne autumatisk er logaritmisk
 
 % semilogx(x,data1)
@@ -130,7 +130,7 @@ p2.MarkerSize = 10;
 
 
 
-%% tekst på figuren
+%% tekst pÃ¥ figuren
 
 figure('position', [-710 100 700 500]);
 plot(x, data1);
@@ -141,12 +141,12 @@ text(14, 6, 'vigtig note');
 
 text(14, 7, 'vigtig note', 'Fontsize', 14, 'Color', 'r', 'FontName', 'Times', 'FontWeight', 'bold', 'Rotation', 55)
 
-% Du kan også justere tegne en pil
+% Du kan ogsÃ¥ justere tegne en pil
 quiver(14, 7, -2, -2, 'MaxHeadSize', 0.5)
 
  
  
-%%  Tips til pæne figure
+%%  Tips til pÃ¦ne figure
 
 figure('position', [-710 100 700 500], 'color', 'w', 'DefaultAxesFontSize',14);
 plot(x, data1, '-s', 'MarkerSize', 10, 'LineWidth', 2);
@@ -159,7 +159,7 @@ box off
 text(14, 6, 'vigtig note', 'Fontsize', 18, 'Color', 'r', 'FontName', 'Times', 'FontWeight', 'bold', 'Rotation', 55)
 quiver(13.9, 5.9, -1.5, -1.6, 'MaxHeadSize', 0.5, 'LineWidth', 2)
 
-print(gcf,'fig1_autosaved.png','-dpng','-r600'); % gem figuren i høj opløsning, overskriver automatisk
+print(gcf,'fig1_autosaved.png','-dpng','-r600'); % gem figuren i hÃ¸j oplÃ¸sning, overskriver automatisk
 
 % print(gcf,'fig1_autosaved.pdf','-dpdf'); % gem figuren i vector format
 
