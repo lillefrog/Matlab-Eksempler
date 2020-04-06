@@ -1,29 +1,30 @@
 % readCSV demo
-% Denne fil viser hvordan man kan læse en CSV fil og få data ind i matlab.
+% Denne fil viser hvordan man kan lÃ¦se en CSV fil og fÃ¥ data ind i matlab.
 % Denne video forklarer hvordan filen virker
 % https://youtu.be/ta2RZLo-eLU
+% du skal ogsÃ¥ dovnloade Test1.csv for at kunne kÃ¸re eksemplet
 
 
-% læs data fra CSV file
+% lÃ¦s data fra CSV file
 FileName = 'Test1.csv';
-fileID = fopen(FileName,'r'); % åben filen for læsning (r=read, w=write, rw=read/write)
+fileID = fopen(FileName,'r'); % Ã¥ben filen for lÃ¦sning (r=read, w=write, rw=read/write)
 
 
 % scan teksten for tal og tekst (denne linje skal tilpasses til det tekst
-% du vil læse
+% du vil lÃ¦se
 C = textscan(fileID, '%f %f %s %f %f %f %f %f %f', 'Delimiter', ',', 'HeaderLines', 1, 'EmptyValue', NaN);
-% Delimiter kan være ; , /t (tab)
-% data kan være %s (tekst) %d (heltal) %f (decimaltal)
+% Delimiter kan vÃ¦re ; , /t (tab)
+% data kan vÃ¦re %s (tekst) %d (heltal) %f (decimaltal)
 
-% Tag en af data serierne og giv den et mere forståeligt navn
+% Tag en af data serierne og giv den et mere forstÃ¥eligt navn
 AGE = C{2};
 
 % brug vores data til en udregning
 Gennemsnit_Alder = mean(AGE) 
 
-% når vi er færdig med at læse filen skal den lukkes så andre programmer
-% kan bruge den. Hvis du glemmer dette kan det være nødvendigt at lukke
-% matlab helt ned før du kan åbne filen igen.
+% nÃ¥r vi er fÃ¦rdig med at lÃ¦se filen skal den lukkes sÃ¥ andre programmer
+% kan bruge den. Hvis du glemmer dette kan det vÃ¦re nÃ¸dvendigt at lukke
+% matlab helt ned fÃ¸r du kan Ã¥bne filen igen.
 fclose(fileID); 
 
 
