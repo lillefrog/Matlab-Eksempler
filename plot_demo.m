@@ -35,7 +35,7 @@ plot(x, data2);
 
 %% linjer (farve og tykkelse)
 
-figure('position', [-710 100 700 500]);
+figure('position', [100 100 700 500]); % in the video I use -710 but that is because I want the figure to show on my second monitor
 plot(x,data1, 'LineWidth', 2, 'Color', [1 0 0] );
 hold on
 plot(x,data2, 'y', 'LineWidth', 10);
@@ -48,7 +48,7 @@ plot(x,data2, 'y', 'LineWidth', 10);
 
 
 %% Linjetype 
-figure('position', [-710 100 700 500]);
+figure('position', [100 100 700 500]);
 plot(x, data1,'-.', 'LineWidth', 2 );
 hold on
 plot(x, data2,':', 'LineWidth', 2 );
@@ -59,7 +59,7 @@ plot(x, data2,':', 'LineWidth', 2 );
 
 
 %% symboler / Marker
-figure('position', [-710 100 700 500]);
+figure('position', [100 100 700 500]);
 plot(x, data1, '--gs');
 hold on
 plot(x, data2, '-.h', 'Marker', 'p', 'MarkerSize', 2, 'MarkerEdgeColor', 'b', 'MarkerFaceColor', [0.3,0.3,0.3]);
@@ -74,7 +74,7 @@ plot(x(6), data1(6), 'rs','MarkerSize', 12);
 
 %% titler / Labels
 
-figure('position', [-710 100 700 500]);
+figure('position', [100 100 700 500]);
 plot(x, data1, '-r+');
 hold on
 plot(x, data2, 'b-s');
@@ -99,7 +99,7 @@ xtickangle(45)
 
 
 %% Logaritmiske akser
-figure('position', [-710 100 700 500]);
+figure('position', [100 100 700 500]);
 plot(x, data1);
 hold on
 plot(x, data2);
@@ -116,7 +116,7 @@ set(gca, 'yScale', 'log')
 
 %% Legends
 
-figure('position', [-710 100 700 500]);
+figure('position', [100 100 700 500]);
 p1 = plot(x, data1);
 hold on
 plot(x, data2+1, ':b');
@@ -132,7 +132,7 @@ p2.MarkerSize = 10;
 
 %% tekst på figuren
 
-figure('position', [-710 100 700 500]);
+figure('position', [100 100 700 500]);
 plot(x, data1);
 hold on
 plot(x, data2);
@@ -148,7 +148,7 @@ quiver(14, 7, -2, -2, 'MaxHeadSize', 0.5)
  
 %%  Tips til pæne figure
 
-figure('position', [-710 100 700 500], 'color', 'w', 'DefaultAxesFontSize',14);
+figure('position', [100 100 700 500], 'color', 'w', 'DefaultAxesFontSize',14);
 plot(x, data1, '-s', 'MarkerSize', 10, 'LineWidth', 2);
 hold on
 plot(x, data2, '-o', 'MarkerSize', 10, 'LineWidth', 2);
